@@ -51,13 +51,18 @@ struct WineListView: View {
     WineListView()
 }
 
-struct Wine: Identifiable {
+struct Wine: Identifiable, CustomDebugStringConvertible {
+
     var id = UUID()
     var winery: String
     var variety: String
     var name: String?
     var inStock: Int
 
+    var debugDescription: String {
+        "\(winery) - \(variety) \(name ?? "") in stock: \(inStock)"
+    }
+    
     static var wines: [Wine] {
         [
             Wine(winery: "Spearhead", variety: "Pinot Noir", name: "Pommard Clone", inStock: 3),
