@@ -32,9 +32,9 @@ struct WineListView: View {
                     }
                     HStack {
                         Text(wine.variety)
+                        Spacer()
                         Text("In stock: \(wine.inStock)")
                             .bold()
-                            .frame(maxWidth: .infinity, alignment: .trailing)
                     }
                 }
                 .onTapGesture {
