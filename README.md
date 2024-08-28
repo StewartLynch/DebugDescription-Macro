@@ -1,6 +1,6 @@
 # DebugDescription Macro
 
-![mac128](Images/mac128.png) This is the starter project  for the video on the DebugDescription macro.
+![mac128](Images/mac128.png) This is the completed source code  for the video on the DebugDescription macro.
 
 
 
