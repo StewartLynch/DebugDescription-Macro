@@ -51,7 +51,8 @@ struct WineListView: View {
     WineListView()
 }
 
-struct Wine: Identifiable, CustomDebugStringConvertible {
+@DebugDescription
+struct Wine: Identifiable {
 
     var id = UUID()
     var winery: String
@@ -60,7 +61,7 @@ struct Wine: Identifiable, CustomDebugStringConvertible {
     var inStock: Int
 
     var debugDescription: String {
-        "\(winery) - \(variety) \(name ?? "") in stock: \(inStock)"
+        "\(winery) - \(variety) \(name) in stock: \(inStock)"
     }
     
     static var wines: [Wine] {
